@@ -1,0 +1,106 @@
+<script>
+
+    function isOldEnoughToDrink(age) {
+        if (age < 18) {
+            console.log("You are not old enough to drink");
+        } else {
+            console.log("You are old enough to drink");
+        }
+    };
+
+    
+    
+    function isOldEnoughToDrinkAndDrive(age) {
+        if (age < 21) {
+            console.log("You are not old enough to drink");
+        } else {
+            console.log("You are old enough to drink but drinking and driving at the same time is illegal!");
+        }
+    };
+
+
+
+    function getProperty(parameter, key) {
+        return parameter.key;
+    };
+
+    var obj = {
+        key:'value'
+    };
+    var output = getProperty(obj, 'key');
+    console.log(output);
+
+
+
+
+    function addProperty(param, val) {
+        param[val] = true
+    };
+    let myObj = {};
+    addProperty(myObj,'myProperty')
+
+    console.log(myObj.myProperty);
+
+
+
+    function isPersonOldEnoughToDrinkAndDrive(age) {
+        if (age >= 18) {
+            console.log('Old enough to drink')
+            console.log('Old enough to drive')
+        } else {
+            console.log('Not old enough to drink')
+            console.log('Not old enough to drive')
+        }
+        return false
+    }
+
+    let obj = {
+        age: 45
+    };
+    let output = isPersonOldEnoughToDrinkAndDrive(obj);
+    console.log(output);
+
+
+
+    function computeAverageLengthOfWords(x,y) {
+        let firstLength = x.length;
+        let secondLength = y.length;
+
+        return (firstLength + secondLength) / 2
+    }
+
+    let output = computeAverageLengthOfWords('code','programs');
+    console.log(output);
+
+
+
+    function transformFirstandLast(arr) {
+        let first = arr[0];
+        let n = arr.length-1;
+        let last = arr[n];
+
+        let obj = {};
+        obj[first] = last;
+        return obj;
+    }
+
+    let output = transformFirstandLast(['Queen','Elizabeth','Of Hearts','Beyonce']);
+    console.log(output);
+
+
+
+    function getAllKeys(param) {
+        let arr = Object.keys(param);
+
+        return arr;
+    }
+
+    let obj = {
+        name: 'Ope',
+        age: 24,
+        isSingle: true
+    }
+    let output = getAllKeys(obj);
+    console.log(output);
+
+</script>
